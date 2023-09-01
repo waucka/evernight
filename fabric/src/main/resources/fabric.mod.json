@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "evernight",
+  "version": "${version}",
+  "name": "Evernight",
+  "description": "Makes it permanently night, but time still flows",
+  "authors": [
+    "waucka"
+  ],
+  "contact": {
+    "homepage": "https://waucka.net/",
+    "sources": "https://github.com/waucka/evernight"
+  },
+  "license": "MIT",
+  "icon": "assets/evernight/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.waucka.evernight.fabric.EvernightFabric"
+    ]
+  },
+  "mixins": [
+    "evernight.mixins.json",
+    "evernight-common.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*",
+    "minecraft": ">=1.18.2",
+    "architectury": ">=4.11.91"
+  }
+}

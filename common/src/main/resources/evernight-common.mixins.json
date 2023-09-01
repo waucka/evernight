@@ -1,0 +1,15 @@
+{
+    "required": true,
+    "package": "net.waucka.evernight.mixin",
+    "compatibilityLevel": "JAVA_17",
+    "minVersion": "0.8",
+    "client": [
+	"MixinClientLevel"
+    ],
+    "mixins": [
+	"MixinLevel"
+    ],
+    "injectors": {
+	"defaultRequire": 1
+    }
+}

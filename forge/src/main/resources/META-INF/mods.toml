@@ -1,0 +1,35 @@
+modLoader = "javafml"
+loaderVersion = "[40,)"
+#issueTrackerURL = ""
+license = "MIT"
+
+[[mods]]
+modId = "evernight"
+version = "${version}"
+displayName = "Evernight"
+authors = "waucka"
+description = '''
+Make the night last forever without stopping time
+'''
+#logoFile = ""
+
+[[dependencies.evernight]]
+modId = "forge"
+mandatory = true
+versionRange = "[40,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.evernight]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.18.2,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.evernight]]
+modId = "architectury"
+mandatory = true
+versionRange = "[4.11.91,)"
+ordering = "AFTER"
+side = "BOTH"
