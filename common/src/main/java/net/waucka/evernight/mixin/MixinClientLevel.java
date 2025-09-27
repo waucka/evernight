@@ -44,6 +44,10 @@ public abstract class MixinClientLevel extends Level {
 
     @Override
     public long getDayTime() {
-	return Evernight.CONFIG.fixedTime;
+	if (Evernight.CONFIG.dimensions.contains(dimension)) {
+            return Evernight.CONFIG.fixedTime;
+        }
+
+        return super.getDayTime();
     }
 }
