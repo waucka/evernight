@@ -38,7 +38,10 @@ public class MixinLevel {
 
     @Inject(method = "updateSkyBrightness", at = @At(value = "RETURN"))
     private void onUpdateSkyBrightness(CallbackInfo ci) {
-	final int moonphase = Evernight.getMoonPhase((Level) (Object) this);
-	this.skyDarken = SKY_DARKNESS_MAP[moonphase];
+	final ResourceLocation dimension = this.dimension().location();
+	if (Evernight.CONFIG.dimensions.contains(dimension)) {
+            final int moonphase = Evernight.getMoonPhase((Level) (Object) this);
+            this.skyDarken = SKY_DARKNESS_MAP[moonphase];
+        }
     }
 }
